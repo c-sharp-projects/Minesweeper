@@ -1,0 +1,751 @@
+﻿<Window x:Class="Minesweeper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Minesweeper"
+        mc:Ignorable="d"
+        Title="Minesweeper" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Button Name="Reset" Content="Reset Game" Uid="Reset" Click="Reset_Click" FontFamily="Showcard Gothic" FontSize="20"/>
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid Name="Game_Grid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0" >
+                    <Button Name="zero_zero" Uid="00" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1" >
+                    <Button Name="zero_one" Uid="01" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="2" >
+                    <Button Name="zero_two" Uid="02" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="3" >
+                    <Button Name="zero_three" Uid="03" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="4" >
+                    <Button Name="zero_four" Uid="04" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="5" >
+                    <Button Name="zero_five" Uid="05" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="6" >
+                    <Button Name="zero_six" Uid="06" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="7" >
+                    <Button Name="zero_seven" Uid="07" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="8" >
+                    <Button Name="zero_eight" Uid="08" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="9" >
+                    <Button Name="zero_nine" Uid="09" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0" >
+                    <Button Name="one_zero" Uid="010" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1" >
+                    <Button Name="one_one" Uid="11" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2" >
+                    <Button Name="one_two" Uid="12" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="3" >
+                    <Button Name="ne_three" Uid="13" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="4" >
+                    <Button Name="one_four" Uid="14" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="5" >
+                    <Button Name="one_five" Uid="15" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="6" >
+                    <Button Name="one_six" Uid="16" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="7" >
+                    <Button Name="one_seven" Uid="17" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="8" >
+                    <Button Name="one_eight" Uid="18" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="9" >
+                    <Button Name="one_nine" Uid="19" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="0" >
+                    <Button  Uid="20" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1" >
+                    <Button  Uid="21" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="2" >
+                    <Button Uid="22" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="3" >
+                    <Button  Uid="23" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="4" >
+                    <Button  Uid="24" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="5" >
+                    <Button  Uid="25" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="6" >
+                    <Button  Uid="26" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="7" >
+                    <Button  Uid="27" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="8" >
+                    <Button  Uid="28" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="9" >
+                    <Button  Uid="29" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="0" >
+                    <Button  Uid="30" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="1" >
+                    <Button  Uid="31" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="2" >
+                    <Button  Uid="32" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="3" >
+                    <Button  Uid="33" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="4" >
+                    <Button  Uid="34" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="5" >
+                    <Button  Uid="35" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="6" >
+                    <Button  Uid="36" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="7" >
+                    <Button  Uid="37" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="8" >
+                    <Button Uid="38" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="9" >
+                    <Button  Uid="39" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="0" >
+                    <Button  Uid="40" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="1" >
+                    <Button  Uid="41" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="2" >
+                    <Button  Uid="42" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="3" >
+                    <Button  Uid="43" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="4" >
+                    <Button  Uid="44" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="5" >
+                    <Button  Uid="45" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="6" >
+                    <Button  Uid="46" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="7" >
+                    <Button  Uid="47" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="8" >
+                    <Button Uid="48" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="9" >
+                    <Button  Uid="49" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="0" >
+                    <Button  Uid="50" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="1" >
+                    <Button  Uid="51" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="2" >
+                    <Button  Uid="52" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="3" >
+                    <Button  Uid="53" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="4" >
+                    <Button  Uid="54" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="5" >
+                    <Button  Uid="55" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="6" >
+                    <Button  Uid="56" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="7" >
+                    <Button  Uid="57" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="8" >
+                    <Button Uid="58" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="9" >
+                    <Button  Uid="59" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="0" >
+                    <Button  Uid="60" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="1" >
+                    <Button  Uid="61" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="2" >
+                    <Button  Uid="62" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="3" >
+                    <Button  Uid="63" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="4" >
+                    <Button  Uid="64" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="5" >
+                    <Button  Uid="65" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="6" >
+                    <Button  Uid="66" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="7" >
+                    <Button  Uid="67" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="8" >
+                    <Button Uid="68" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="9" >
+                    <Button  Uid="69" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="0" >
+                    <Button  Uid="70" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="1" >
+                    <Button  Uid="71" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="2" >
+                    <Button  Uid="72" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="3" >
+                    <Button  Uid="73" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="4" >
+                    <Button  Uid="74" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="5" >
+                    <Button  Uid="75" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="6" >
+                    <Button  Uid="76" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="7" >
+                    <Button  Uid="77" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="8" >
+                    <Button Uid="78" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="7" Grid.Column="9" >
+                    <Button  Uid="79" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="8" Grid.Column="0" >
+                    <Button  Uid="80" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="8" Grid.Column="1" >
+                    <Button  Uid="81" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="8" Grid.Column="2" >
+                    <Button  Uid="82" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="8" Grid.Column="3" >
+                    <Button  Uid="83" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="8" Grid.Column="4" >
+                    <Button  Uid="84" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="8" Grid.Column="5" >
+                    <Button  Uid="85" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="8" Grid.Column="6" >
+                    <Button  Uid="86" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="8" Grid.Column="7" >
+                    <Button  Uid="87" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="8" Grid.Column="8" >
+                    <Button Uid="88" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="8" Grid.Column="9" >
+                    <Button  Uid="89" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="9" Grid.Column="0" >
+                    <Button  Uid="90" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="9" Grid.Column="1" >
+                    <Button  Uid="91" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="9" Grid.Column="2" >
+                    <Button  Uid="92" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="9" Grid.Column="3" >
+                    <Button  Uid="93" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="9" Grid.Column="4" >
+                    <Button  Uid="94" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="9" Grid.Column="5" >
+                    <Button  Uid="95" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="9" Grid.Column="6" >
+                    <Button  Uid="96" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="9" Grid.Column="7" >
+                    <Button  Uid="97" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="9" Grid.Column="8" >
+                    <Button Uid="98" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="9" Grid.Column="9" >
+                    <Button  Uid="99" Click="ActionListener" BorderThickness="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding ButtonImg}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
